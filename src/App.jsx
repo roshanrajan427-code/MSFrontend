@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080'
+const API_URL = import.meta.env.VITE_API_URL || 'http://16.4.23.217:8080'
 const emptyShop = { name: '', category: 'Food', location: '' }
 const emptyProduct = { name: '', stock: '0', price: '', color: '', size: '', image: null }
 
