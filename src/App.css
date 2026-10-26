@@ -1,0 +1,13 @@
+
+.card {
+  border-radius: 12px;
+}
+
+.form-control,
+.form-select {
+  padding: 0.65rem 0.75rem;
+}
+
+button {
+  cursor: pointer;
+}
