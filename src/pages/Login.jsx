@@ -1,6 +1,6 @@
 export default function Login({ screen, setScreen, mobileNumber, setMobileNumber, otp, setOtp, onContinue, onVerify }) {
-  return <section className="card border-0 shadow-sm p-3 p-md-4 mb-4">
+  return <div className="auth-page"><h1 className="auth-title">Multi Vendor</h1><section className="card auth-card border-0 shadow-sm p-3 p-md-4 mb-4">
     {screen === 'phone' && <><h2 className="h4 mb-3">Sign in or create an account</h2><form onSubmit={onContinue}><div className="mb-3"><label className="form-label" htmlFor="auth-mobile">Mobile number</label><input id="auth-mobile" type="tel" inputMode="numeric" autoComplete="tel" maxLength={12} minLength={10} pattern="[0-9]{10,12}" className="form-control" value={mobileNumber} onChange={(event) => setMobileNumber(event.target.value.replace(/\D/g, '').slice(0, 12))} required /></div><button className="btn btn-dark">Continue</button></form></>}
     {screen === 'otp' && <><h2 className="h4 mb-3">Verify your mobile number</h2><p className="text-secondary">Development OTP: <strong>0000</strong></p><form onSubmit={onVerify}><div className="mb-3"><label className="form-label" htmlFor="otp">OTP</label><input id="otp" inputMode="numeric" maxLength={4} pattern="[0-9]{4}" className="form-control" value={otp} onChange={(event) => setOtp(event.target.value.replace(/\D/g, '').slice(0, 4))} required /></div><button className="btn btn-dark">Verify and continue</button> <button type="button" className="btn btn-link" onClick={() => setScreen('phone')}>Change number</button></form></>}
-  </section>
+  </section></div>
 }
